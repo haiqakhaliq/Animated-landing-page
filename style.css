@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Merriweather:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #ffccff 50%, #80e5ff 50%);
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: -3;
+    width: 8rem;
+    height: 8rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 4rem;
+    z-index: -3;
+    width: 10rem;
+    height: 10rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+html{
+    font-size: 10px;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    grid-template-rows: .2fr 1fr .3fr;
+    grid-template-areas: "header header header"
+                         "left body right"
+                         "footer footer footer";
+                         grid-gap:1rem;
+                         padding: 1rem;
+
+    width: 90%;
+    min-height: 85vh;
+    background: linear-gradient(90deg, #80e5ff 50%, #ffccff 50%);
+    box-shadow: 5px 5px 5px rgba(16,16,16,.1),
+                10px 10px 10px rgba(16,16,16,.1),
+                15px 15px 15px rgba(16,16,16,.1),
+                20px 20px 20px rgba(16,16,16,.1),
+                25px 25px 25px rgba(16,16,16,.1);
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: -3.5rem;
+    width: 6rem;
+    height: 6rem;
+    background: #ffccff;
+    border-radius: 50%;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    width: 12rem;
+    height: 12rem;
+    background: #80e5ff;
+    border-radius: 50%;
+}
+
+.container .bg{
+     background: rgba(255,255,255,.2);
+}
+.header{
+    grid-area: header;
+}
+
+.left-content{
+    grid-area: left;
+}
+
+.main-body{
+    grid-area: body;
+}
+
+.right-content{
+    grid-area: right;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+
+/*//////////////// Header css start /////////////// */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header .logo img{
+    width: 4rem;
+    height: 5rem;
+    
+}
+
+.header .navbar li{
+    display: inline-block;
+}
+
+.header .navbar li a{
+    text-transform: capitalize;
+    color: #fff;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+}
+
+.header .navbar li .fa-cart-shopping{
+    color: #fff;
+    font-size: 3.5rem;
+    padding: 0 2rem;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+}
+
+.header .navbar .cart{
+    position: relative;
+    z-index: 3;
+}
+
+.header .navbar .cart span{
+    position: absolute;
+    top: -.5rem;
+    right: .8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #cacaca;
+    box-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                2px 2px 2px rgba(16,16,16,.1),
+                3px 3px 3px rgba(16,16,16,.1);
+}
+
+/* ////////////////////.left-content css start ///////////////////// */
+
+.left-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-content .icons{
+    position: relative;
+    bottom: 4rem;
+}
+
+.left-content .icons .fa-brands{
+    margin: 1.5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+                 transition: .3s;
+}
+
+.left-content .icons .fa-brands:hover{
+    transform: rotate(360deg) scale(1.5);
+    color: #000;
+}
+
+.left-content .icons span{
+    position: absolute;
+    left: 2.5rem;
+    width: .2rem;
+    height: 8rem;
+    background: #fff;
+    box-shadow: 5px 5px 5px rgba(16,16,16,.3);
+}
+
+/*//////////////// .main-body css start ////////////////////// */
+
+.main-body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-body .heading{
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+}
+
+.main-body .heading .h1{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-body .heading .h2 span{
+    font-size: 16rem;
+    letter-spacing: 3rem;
+    text-transform: uppercase;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: normal;
+}
+
+.main-body .heading .h3{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ///////////////.right-content css start /////////////// */
+
+.right-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-content .right{
+    position: relative;
+    top: 4rem;
+}
+
+.right-content .right li{
+    margin: 2rem;
+}
+
+.right-content .right li .fa-regular{
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+}
+
+.right-content .right li .fa-solid{
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+}
+
+.right-content .right span{
+    position: absolute;
+    top: -8rem;
+    right: 2.5rem;
+    width: .2rem;
+    height: 8rem;
+    background: #fff;
+    box-shadow: 5px 5px 5px rgba(16,16,16,.3);
+}
+
+/* /////////////////footer css start ///////////////// */
+
+.footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .content{
+    position: absolute;
+    top: 1rem;
+}
+
+.footer .content{
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer .content span{
+    left: 46rem;
+    bottom: 1rem;
+    position: absolute;
+    width: 5rem;
+    height: .2rem;
+    background: #fff;
+    box-shadow: 5px 5px 5px rgba(16,16,16,.3);
+}
+
+.footer .button{
+    position: absolute;
+    bottom: 3rem;
+}
+
+.footer .button a{
+    background: #fff;
+    color: #000;
+    text-shadow: 1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+
+    box-shadow:  1px 1px 1px rgba(16,16,16,.1),
+                 2px 2px 2px rgba(16,16,16,.1),
+                 3px 3px 3px rgba(16,16,16,.1),
+                 4px 4px 4px rgba(16,16,16,.1),
+                 5px 5px 5px rgba(16,16,16,.1);
+    
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem 3rem;
+    border-radius: 2rem;
+}
+
+/*/////////////////////// RESPONSIVE CSS ////////////////////// */
+
+@media(max-width: 1024px)
+{
+    html{
+        font-size: 9.5px;
+    }
+}
+
+@media(max-width: 936px)
+{
+    html{
+        font-size: 9px;
+    }
+}
+
+@media(max-width: 888px)
+{
+    html{
+        font-size: 8.5px;
+    }
+}
+
+@media(max-width: 840px)
+{
+    html{
+        font-size: 7.5px;
+    }
+}
+
+@media(max-width: 768px)
+{
+    html{
+        font-size: 7px;
+    }
+
+    body{
+        /* background: linear-gradient(90deg, #fff 50%, #000 50%); */
+        background: linear-gradient(90deg, #FDFFAE 50%, #FF9B9B 50%);
+    }
+
+    .container{
+        /* background: linear-gradient(90deg, #000 50%, #fff 50%); */
+        background: linear-gradient(90deg, #FF9B9B 50%, #FDFFAE 50%)
+    } 
+
+    .right-content .right li .fa-regular{
+        color: #fff;
+    }
+
+    .right-content .right li .fa-solid{
+        color: #fff;
+    }
+
+    .right-content .right span{
+        background: #fff;
+    }
+
+    .header .navbar li a{
+        color: #fff;
+    }
+
+    .header .navbar li .fa-cart-shopping{
+        color: #fff;
+    }
+
+    .header .navbar .cart span{
+        color: #000;
+        background: #fff;
+    }
+
+    .h3{
+        color: #fff;
+    }
+
+    .footer .content{
+        top: 3rem;
+    }
+
+    .main-body .heading .h2 span{
+        display: flex;
+        flex-direction: column;
+        font-size: 8rem;
+    }
+
+    .container::after{
+        content: '';
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+        width: 12rem;
+        height: 12rem;
+        background: #FF9B9B;
+        border-radius: 50%;
+    }    
+
+    .container::before{
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: -3.5rem;
+        width: 6rem;
+        height: 6rem;
+        background: #FDFFAE;
+        border-radius: 50%;
+    }
+}
+
+@media(max-width: 540px)
+{
+   .header .navbar li a{
+        color: #fff;
+    }
+
+    .container .bg{
+        backdrop-filter: blur(10px);
+    }
+}
+
+
+
+.donut-img{
+    position: absolute;
+}
+
+.donut-img img{
+    width: 10rem;
+    height: 10rem;
+    padding: 0 5rem;
+    transform: translateY(-80rem);
+    animation: anime 20s linear infinite;
+    animation-delay: calc(-12s*var(--i));
+    z-index: -2;
+}
+
+@keyframes anime{
+    to{
+        transform: translateY(80rem) rotate(360deg);
+    }
+}
